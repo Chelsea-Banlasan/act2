@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Portfolio</title>
+</head>
+<body>
+  <div class="navBar">
+    <div class="navBarHeader">My Portfolio</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button onclick="switchTheme()">Switch Theme</button> </div>
+  <div class="homePage" id="home">
+    <div class="homeContainer">
+      <div class="name">Welcome!</div>
+      <div class="description">This is my first webpage design and I'm still learning!</div>
+    </div>
+  </div>
+  <div class="aboutPage" id="about">
+    <div class="aboutTitle">About Me</div><br>
+    <div class="aboutMyself"><br>
+      <p>My name is Chelsea Mae Banlasan. Graduated from Brokenshire Toril. Started my college journey at the age of 22. I like spending my time playing Valorant, watching movies and anime, listening to music, and reading.</p>
+    </div>
+  </div>
+  <div class="contactPage" id="contact">
+    <div class="contactTitle">Contacts</div><br>
+    <div class="hcdcEmail">EMAIL: chelseabanlasan@hcdc.edu.ph</div>
+    <div class="facebook"> FB: chelseajulailybanlasan</div>
+  </div>
+  <script>
+    const themes = ['theme1', 'theme2', 'theme3']; // Replace with your theme class names
+    let currentThemeIndex = 0;
+
+    function switchTheme() {
+      currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+      document.body.setAttribute('data-theme', themes[currentThemeIndex]);
+    }
+  </script>
+</body>
+</html>
